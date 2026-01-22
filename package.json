@@ -1,28 +1,53 @@
 {
-  "name": "@anthropic/mcp-azure-devops",
+  "name": "@fabriciofs/mcp-azure-devops",
   "version": "1.0.0",
-  "description": "MCP server for Azure DevOps with PAT-only authentication - combines Microsoft's comprehensive tools with simple PAT auth",
+  "description": "MCP Server for Azure DevOps with PAT-only authentication - All 82 tools from Microsoft's official MCP with simple PAT auth",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "bin": {
-    "mcp-azure-devops": "dist/index.js"
+    "mcp-azure-devops": "./build/index.js"
   },
+  "files": [
+    "build/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
+    "start": "node --env-file=.env build/index.js",
+    "start:prod": "node build/index.js",
     "dev": "tsc --watch",
-    "start": "node dist/index.js",
-    "lint": "eslint src --ext .ts",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf build",
+    "rebuild": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit",
+    "inspector": "npx @modelcontextprotocol/inspector"
   },
   "keywords": [
     "mcp",
     "azure-devops",
+    "claude",
+    "anthropic",
+    "devops",
     "model-context-protocol",
-    "ai",
-    "llm"
+    "pat",
+    "pipelines",
+    "work-items",
+    "git"
   ],
-  "author": "",
+  "author": "fabriciofs",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabriciofs/mcp-azure-devops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fabriciofs/mcp-azure-devops/issues"
+  },
+  "homepage": "https://github.com/fabriciofs/mcp-azure-devops#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "azure-devops-node-api": "^14.1.0",
@@ -32,8 +57,5 @@
   "devDependencies": {
     "@types/node": "^20.10.0",
     "typescript": "^5.3.2"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }

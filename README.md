@@ -1,203 +1,203 @@
 # MCP Azure DevOps Server
 
-Um servidor MCP (Model Context Protocol) para Azure DevOps que combina os recursos abrangentes do MCP oficial da Microsoft com autenticação simplificada usando apenas PAT (Personal Access Token).
+An MCP (Model Context Protocol) server for Azure DevOps that combines the comprehensive features of Microsoft's official MCP with simplified authentication using only PAT (Personal Access Token).
 
-## Características
+## Features
 
-- **Autenticação simples via PAT**: Não requer autenticação interativa via navegador
-- **100% dos recursos do MCP oficial**: Inclui todos os 82 tools do Azure DevOps MCP da Microsoft
-- **Compatível com Claude Code e outros clientes MCP**
+- **Simple PAT authentication**: No interactive browser authentication required
+- **100% of official MCP features**: Includes all 82 tools from Microsoft's Azure DevOps MCP
+- **Compatible with Claude Code and other MCP clients**
 
-## Recursos Disponíveis (82 tools)
+## Available Resources (82 tools)
 
 ### Core (3 tools)
-| Tool | Descrição |
-|------|-----------|
-| `core_list_projects` | Listar projetos da organização |
-| `core_list_project_teams` | Listar times de um projeto |
-| `core_get_identity_ids` | Buscar identidades por filtro |
+| Tool | Description |
+|------|-------------|
+| `core_list_projects` | List organization projects |
+| `core_list_project_teams` | List teams in a project |
+| `core_get_identity_ids` | Search identities by filter |
 
-### Repositórios (18 tools)
-| Tool | Descrição |
-|------|-----------|
-| `repo_list_repos_by_project` | Listar repositórios de um projeto |
-| `repo_get_repo_by_name_or_id` | Obter repositório por nome ou ID |
-| `repo_list_branches_by_repo` | Listar branches de um repositório |
-| `repo_list_my_branches_by_repo` | Listar minhas branches |
-| `repo_get_branch_by_name` | Obter branch por nome |
-| `repo_create_branch` | Criar nova branch |
-| `repo_list_pull_requests_by_repo_or_project` | Listar pull requests |
-| `repo_get_pull_request_by_id` | Obter detalhes de um PR |
-| `repo_create_pull_request` | Criar pull request |
-| `repo_update_pull_request` | Atualizar pull request |
-| `repo_update_pull_request_reviewers` | Atualizar revisores do PR |
-| `repo_list_pull_request_threads` | Listar threads de comentários do PR |
-| `repo_list_pull_request_thread_comments` | Listar comentários de uma thread |
-| `repo_create_pull_request_thread` | Criar thread de comentário |
-| `repo_update_pull_request_thread` | Atualizar thread |
-| `repo_reply_to_comment` | Responder a um comentário |
-| `repo_search_commits` | Buscar commits |
-| `repo_list_pull_requests_by_commits` | Listar PRs por commits |
+### Repositories (18 tools)
+| Tool | Description |
+|------|-------------|
+| `repo_list_repos_by_project` | List repositories in a project |
+| `repo_get_repo_by_name_or_id` | Get repository by name or ID |
+| `repo_list_branches_by_repo` | List branches in a repository |
+| `repo_list_my_branches_by_repo` | List my branches |
+| `repo_get_branch_by_name` | Get branch by name |
+| `repo_create_branch` | Create new branch |
+| `repo_list_pull_requests_by_repo_or_project` | List pull requests |
+| `repo_get_pull_request_by_id` | Get PR details |
+| `repo_create_pull_request` | Create pull request |
+| `repo_update_pull_request` | Update pull request |
+| `repo_update_pull_request_reviewers` | Update PR reviewers |
+| `repo_list_pull_request_threads` | List PR comment threads |
+| `repo_list_pull_request_thread_comments` | List comments in a thread |
+| `repo_create_pull_request_thread` | Create comment thread |
+| `repo_update_pull_request_thread` | Update thread |
+| `repo_reply_to_comment` | Reply to a comment |
+| `repo_search_commits` | Search commits |
+| `repo_list_pull_requests_by_commits` | List PRs by commits |
 
 ### Work Items (21 tools)
-| Tool | Descrição |
-|------|-----------|
-| `wit_get_work_item` | Obter work item por ID |
-| `wit_get_work_items_batch_by_ids` | Obter múltiplos work items |
-| `wit_create_work_item` | Criar work item |
-| `wit_update_work_item` | Atualizar work item |
-| `wit_update_work_items_batch` | Atualizar múltiplos work items |
-| `wit_my_work_items` | Listar meus work items |
-| `wit_list_backlogs` | Listar backlogs |
-| `wit_list_backlog_work_items` | Listar items do backlog |
-| `wit_list_work_item_comments` | Listar comentários |
-| `wit_add_work_item_comment` | Adicionar comentário |
-| `wit_list_work_item_revisions` | Listar revisões |
-| `wit_get_work_items_for_iteration` | Obter items de uma iteração |
-| `wit_add_child_work_items` | Adicionar work items filhos |
-| `wit_work_items_link` | Criar link entre work items |
-| `wit_work_item_unlink` | Remover link entre work items |
-| `wit_link_work_item_to_pull_request` | Vincular work item a PR |
-| `wit_add_artifact_link` | Adicionar link de artefato |
-| `wit_get_work_item_type` | Obter tipo de work item |
-| `wit_get_query` | Obter query salva |
-| `wit_get_query_results_by_id` | Executar query por ID |
+| Tool | Description |
+|------|-------------|
+| `wit_get_work_item` | Get work item by ID |
+| `wit_get_work_items_batch_by_ids` | Get multiple work items |
+| `wit_create_work_item` | Create work item |
+| `wit_update_work_item` | Update work item |
+| `wit_update_work_items_batch` | Update multiple work items |
+| `wit_my_work_items` | List my work items |
+| `wit_list_backlogs` | List backlogs |
+| `wit_list_backlog_work_items` | List backlog items |
+| `wit_list_work_item_comments` | List comments |
+| `wit_add_work_item_comment` | Add comment |
+| `wit_list_work_item_revisions` | List revisions |
+| `wit_get_work_items_for_iteration` | Get items for an iteration |
+| `wit_add_child_work_items` | Add child work items |
+| `wit_work_items_link` | Create link between work items |
+| `wit_work_item_unlink` | Remove link between work items |
+| `wit_link_work_item_to_pull_request` | Link work item to PR |
+| `wit_add_artifact_link` | Add artifact link |
+| `wit_get_work_item_type` | Get work item type |
+| `wit_get_query` | Get saved query |
+| `wit_get_query_results_by_id` | Execute query by ID |
 
 ### Pipelines (14 tools)
-| Tool | Descrição |
-|------|-----------|
-| `pipelines_get_builds` | Listar builds |
-| `pipelines_get_build_changes` | Obter mudanças de um build |
-| `pipelines_get_build_definitions` | Listar definições de build |
-| `pipelines_get_build_definition_revisions` | Listar revisões de definição |
-| `pipelines_get_build_log` | Obter logs de build |
-| `pipelines_get_build_log_by_id` | Obter log específico por ID |
-| `pipelines_get_build_status` | Obter status do build |
-| `pipelines_update_build_stage` | Atualizar estágio do build |
-| `pipelines_create_pipeline` | Criar pipeline |
-| `pipelines_get_run` | Obter execução de pipeline |
-| `pipelines_list_runs` | Listar execuções |
-| `pipelines_run_pipeline` | Executar pipeline |
-| `pipelines_list_artifacts` | Listar artefatos |
-| `pipelines_download_artifact` | Baixar artefato |
+| Tool | Description |
+|------|-------------|
+| `pipelines_get_builds` | List builds |
+| `pipelines_get_build_changes` | Get build changes |
+| `pipelines_get_build_definitions` | List build definitions |
+| `pipelines_get_build_definition_revisions` | List definition revisions |
+| `pipelines_get_build_log` | Get build logs |
+| `pipelines_get_build_log_by_id` | Get specific log by ID |
+| `pipelines_get_build_status` | Get build status |
+| `pipelines_update_build_stage` | Update build stage |
+| `pipelines_create_pipeline` | Create pipeline |
+| `pipelines_get_run` | Get pipeline run |
+| `pipelines_list_runs` | List runs |
+| `pipelines_run_pipeline` | Run pipeline |
+| `pipelines_list_artifacts` | List artifacts |
+| `pipelines_download_artifact` | Download artifact |
 
 ### Wiki (6 tools)
-| Tool | Descrição |
-|------|-----------|
-| `wiki_list_wikis` | Listar wikis do projeto |
-| `wiki_get_wiki` | Obter wiki por ID |
-| `wiki_list_pages` | Listar páginas da wiki |
-| `wiki_get_page` | Obter página por path |
-| `wiki_get_page_content` | Obter conteúdo da página |
-| `wiki_create_or_update_page` | Criar ou atualizar página |
+| Tool | Description |
+|------|-------------|
+| `wiki_list_wikis` | List project wikis |
+| `wiki_get_wiki` | Get wiki by ID |
+| `wiki_list_pages` | List wiki pages |
+| `wiki_get_page` | Get page by path |
+| `wiki_get_page_content` | Get page content |
+| `wiki_create_or_update_page` | Create or update page |
 
 ### Search (3 tools)
-| Tool | Descrição |
-|------|-----------|
-| `search_code` | Buscar código |
-| `search_wiki` | Buscar na wiki |
-| `search_workitem` | Buscar work items |
+| Tool | Description |
+|------|-------------|
+| `search_code` | Search code |
+| `search_wiki` | Search wiki |
+| `search_workitem` | Search work items |
 
 ### Test Plans (9 tools)
-| Tool | Descrição |
-|------|-----------|
-| `testplan_list_test_plans` | Listar test plans |
-| `testplan_create_test_plan` | Criar test plan |
-| `testplan_list_test_suites` | Listar test suites |
-| `testplan_create_test_suite` | Criar test suite |
-| `testplan_list_test_cases` | Listar test cases |
-| `testplan_create_test_case` | Criar test case |
-| `testplan_update_test_case_steps` | Atualizar passos do test case |
-| `testplan_add_test_cases_to_suite` | Adicionar test cases a suite |
-| `testplan_show_test_results_from_build_id` | Obter resultados de teste de um build |
+| Tool | Description |
+|------|-------------|
+| `testplan_list_test_plans` | List test plans |
+| `testplan_create_test_plan` | Create test plan |
+| `testplan_list_test_suites` | List test suites |
+| `testplan_create_test_suite` | Create test suite |
+| `testplan_list_test_cases` | List test cases |
+| `testplan_create_test_case` | Create test case |
+| `testplan_update_test_case_steps` | Update test case steps |
+| `testplan_add_test_cases_to_suite` | Add test cases to suite |
+| `testplan_show_test_results_from_build_id` | Get test results from a build |
 
 ### Advanced Security (2 tools)
-| Tool | Descrição |
-|------|-----------|
-| `advsec_get_alerts` | Obter alertas de segurança |
-| `advsec_get_alert_details` | Obter detalhes de um alerta |
+| Tool | Description |
+|------|-------------|
+| `advsec_get_alerts` | Get security alerts |
+| `advsec_get_alert_details` | Get alert details |
 
 ### Work/Iterations (7 tools)
-| Tool | Descrição |
-|------|-----------|
-| `work_list_team_iterations` | Listar iterações do time |
-| `work_list_iterations` | Listar iterações do projeto |
-| `work_create_iterations` | Criar iterações |
-| `work_assign_iterations` | Atribuir iterações ao time |
-| `work_get_team_capacity` | Obter capacidade do time |
-| `work_update_team_capacity` | Atualizar capacidade |
-| `work_get_iteration_capacities` | Obter capacidades da iteração |
+| Tool | Description |
+|------|-------------|
+| `work_list_team_iterations` | List team iterations |
+| `work_list_iterations` | List project iterations |
+| `work_create_iterations` | Create iterations |
+| `work_assign_iterations` | Assign iterations to team |
+| `work_get_team_capacity` | Get team capacity |
+| `work_update_team_capacity` | Update capacity |
+| `work_get_iteration_capacities` | Get iteration capacities |
 
-## Instalação
+## Installation
 
 ```bash
 npm install
 npm run build
 ```
 
-## Configuração
+## Configuration
 
-Defina as variáveis de ambiente:
+Set the environment variables:
 
 ```bash
-# URL da organização Azure DevOps
-export AZURE_DEVOPS_ORG_URL=https://dev.azure.com/sua-organizacao
+# Azure DevOps organization URL
+export AZURE_DEVOPS_ORG_URL=https://dev.azure.com/your-organization
 
 # Personal Access Token
-export AZURE_DEVOPS_PAT=seu-pat-token
+export AZURE_DEVOPS_PAT=your-pat-token
 ```
 
-### Gerando um PAT
+### Generating a PAT
 
-1. Acesse `https://dev.azure.com/{sua-org}/_usersSettings/tokens`
-2. Clique em "New Token"
-3. Selecione os escopos necessários:
+1. Go to `https://dev.azure.com/{your-org}/_usersSettings/tokens`
+2. Click "New Token"
+3. Select the required scopes:
    - **Code**: Read & Write
    - **Work Items**: Read & Write
    - **Build**: Read & Execute
    - **Project and Team**: Read
    - **Wiki**: Read & Write
    - **Test Management**: Read & Write
-   - **Advanced Security**: Read (se necessário)
+   - **Advanced Security**: Read (if needed)
 
-## Uso com Claude Code
+## Usage with Claude Code
 
-Adicione ao seu arquivo de configuração MCP (`~/.config/claude-code/mcp.json` ou similar):
+Add to your MCP configuration file (`~/.config/claude-code/mcp.json` or similar):
 
 ```json
 {
   "mcpServers": {
     "azure-devops": {
       "command": "node",
-      "args": ["/caminho/para/mcp-azure-devops/dist/index.js"],
+      "args": ["/path/to/mcp-azure-devops/build/index.js"],
       "env": {
-        "AZURE_DEVOPS_ORG_URL": "https://dev.azure.com/sua-organizacao",
-        "AZURE_DEVOPS_PAT": "seu-pat-token"
+        "AZURE_DEVOPS_ORG_URL": "https://dev.azure.com/your-organization",
+        "AZURE_DEVOPS_PAT": "your-pat-token"
       }
     }
   }
 }
 ```
 
-## Execução Manual
+## Manual Execution
 
 ```bash
-# Com variáveis de ambiente
+# With environment variables
 AZURE_DEVOPS_ORG_URL=https://dev.azure.com/org AZURE_DEVOPS_PAT=token npm start
 
-# Ou usando arquivo .env
+# Or using .env file
 npm start
 ```
 
-## Comparação com o MCP oficial da Microsoft
+## Comparison with Microsoft's official MCP
 
-| Característica | MCP Microsoft | Este MCP |
-|---------------|---------------|----------|
-| Autenticação | OAuth interativo, Azure CLI, env vars | Apenas PAT |
-| Requer navegador | Sim (padrão) | Não |
-| Total de tools | 82 | 82 (100%) |
-| Complexidade | Alta | Baixa |
+| Feature | Microsoft MCP | This MCP |
+|---------|---------------|----------|
+| Authentication | Interactive OAuth, Azure CLI, env vars | PAT only |
+| Requires browser | Yes (default) | No |
+| Total tools | 82 | 82 (100%) |
+| Complexity | High | Low |
 
-## Licença
+## License
 
 MIT
