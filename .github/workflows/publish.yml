@@ -38,7 +38,8 @@ jobs:
         run: npm run build
 
       - name: Bump version
-        run: npm version patch -m "chore: bump version to %s"
+        run: |
+          npm version patch -m "chore: bump version to %s"
 
       - name: Publish to npm
         run: npm publish --provenance --access public
