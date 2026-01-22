@@ -1,6 +1,6 @@
 {
   "name": "@fabriciofs/mcp-azure-devops",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP Server for Azure DevOps with PAT-only authentication - All 82 tools from Microsoft's official MCP with simple PAT auth",
   "type": "module",
   "main": "build/index.js",
